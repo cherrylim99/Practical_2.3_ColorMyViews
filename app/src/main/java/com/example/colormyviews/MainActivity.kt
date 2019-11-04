@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
             R.id.box_four_text -> view.setBackgroundColor(Color.MAGENTA)
             R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
             // Boxes using custom colors for background
-            R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
+            /*R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
             R.id.yellow_button -> box_four_text.setBackgroundResource(R.color.my_yellow)
-            R.id.green_button -> box_five_text.setBackgroundResource(R.color.my_green)
+            R.id.green_button -> box_five_text.setBackgroundResource(R.color.my_green)*/
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
         /*when (view.id) {
@@ -46,12 +46,13 @@ class MainActivity : AppCompatActivity() {
         val boxFourText = findViewById<TextView>(R.id.box_four_text)
         val boxFiveText = findViewById<TextView>(R.id.box_five_text)
 
-        val redButton = findViewById<TextView>(R.id.red_button)
+        /*val redButton = findViewById<TextView>(R.id.red_button)
         val greenButton = findViewById<TextView>(R.id.green_button)
-        val yellowButton = findViewById<TextView>(R.id.yellow_button)
+        val yellowButton = findViewById<TextView>(R.id.yellow_button)*/
 
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
-        val clickableViews: List<View> = listOf(boxOneText, boxTwoText, boxThreeText,boxFourText, boxFiveText, rootConstraintLayout, redButton, greenButton, yellowButton)
+        val clickableViews: List<View> = listOf(boxOneText, boxTwoText, boxThreeText,boxFourText, boxFiveText, rootConstraintLayout)
+        /*val clickableViews: List<View> = listOf(boxOneText, boxTwoText, boxThreeText,boxFourText, boxFiveText, rootConstraintLayout, redButton, greenButton, yellowButton)*/
         for (item in clickableViews) {item.setOnClickListener { makeColored(it) }}
 }
 }
